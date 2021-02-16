@@ -1,0 +1,134 @@
+
+
+
+
+// This Program is intended to serve you a basic example of Constructor and Method OverLoading 
+// Here 2 Types of constructors have been used 
+
+// First :  Non - Parameterized Constructor 
+// Second : Parameterized Constructor
+
+// The Area() has been Overloaded With Differentiation of given parameters and passed arguments
+
+
+
+
+
+//							***********			Beginning of Class DemoConstructor			****************
+class DemoConstructor{
+	double a=-1 ;
+	double b=-1;
+	double c=-1;
+	double area=-1;
+	
+	// Parameterized Constructor has been defined
+	
+	 DemoConstructor(double a, double b, double c){
+		this.a = a;
+		this.b = b;
+		this.c = c;
+		area=this.a*this.b*this.c;
+		System.out.println("Area with Given arguments in main Method, and as parameters in contructor is  "+area+"\n");
+	}
+	//!!!!!!! Parameterized Constructor has been closed !!!!!!
+	 
+	 
+	 
+	 // Non - Parameterized Constructor has been defined
+	 
+	 DemoConstructor(){
+		 
+	 }
+	 // !!!!!! Non - Parameterized Constructor has been closed !!!!!!!
+	 
+	 
+	 // Non - Parameterized Area () Definition
+	void Area(){
+		System.out.println("The Non Parameterized Method has been called so by default the value of area is ");
+	}
+	// !!!!!!!!!!! Non - Parameterized Area () CLOSED !!!!!!
+	
+	//Parameterized Area () has been Defined with Single Parameter and Passed Argument
+	double Area(double r){
+		System.out.println("You Are Getting Area Of Circle by this Method it is a Single Parameter Method ");
+		System.out.println("The Diameter Of Circle is ");
+		area=(22/7)*r*r;
+		return area;
+	}
+	//!!!!!!!!!!! Parameterized Area () has been CLOSED !!!!!!
+	
+	//Parameterized Area () has been Defined with Single Parameter and Passed Argument
+	double Area(Double a){
+		System.out.println("You Are Getting Square' area by this Method ,it is a single parameter Method ");
+		System.out.println("The area of square is ");
+		area=a*a;
+		return area;
+	}
+	//!!!!!!!!!! Parameterized Area () has been CLOSED !!!!!!
+	
+	//Parameterized Area () has been Defined with two Parameters and Passed Arguments
+	double Area(double l, double h,double w) {
+		System.out.println("You are in triple Parameter Method accepting three parameters");
+		System.out.println("This will print Volume of a Box");
+		area=l*h*w;
+		return area;
+		
+	}
+	//!!!!!!!!!! Parameterized Area () has been CLOSED !!!!!!!
+    
+	//Display () has been Defined to display area as per defined parameters and arguments passed by objects and Constructors 
+	void Display() {
+		System.out.println("\n");
+		System.out.println("****\t"+area+"\t****\n");
+				
+	}
+	//!!!!!!!!!!! Display () has been CLOSED !!!!!
+	
+	}
+// ***************			exiting Class DemoConstructor			*******************
+
+
+
+
+
+
+class Constructor {
+
+	public static void main(String[] args) {
+		
+		DemoConstructor obj= new DemoConstructor(0, 0, 0);  // "obj" constructor parameterized by 0 as value
+		DemoConstructor obj2= new DemoConstructor();		// "obj2" constructor with non Parameterized state
+		DemoConstructor obj3= new DemoConstructor();		// "obj3" constructor with non Parameterized state
+		DemoConstructor obj4= new DemoConstructor();		// "obj4" constructor with non Parameterized state
+		DemoConstructor obj5= new DemoConstructor();		// "obj5" constructor with non Parameterized state
+		DemoConstructor obj6=new DemoConstructor(45,45,45);	// "obj6" constructor Parameterized by 45 as value in each passed Argument
+		
+		//Performing Operations on "obj"
+		obj.Area();	// Calling Area Method
+		obj.Display(); // Calling Display Method
+		
+		//Performing Operations on "obj2"
+		obj2.Area(48.865); // Calling Area Method
+		obj2.Display();// Calling Display Method
+		
+		//Performing Operations on "obj3"
+		obj3.Area(45.9,455.5,545.5); // Calling Area Method
+		obj3.Display();// Calling Display Method
+		
+		//Performing Operations on "obj4"
+		obj4.Area(48); // Calling Area Method
+		obj4.Display();// Calling Display Method
+		
+		//Performing Operations on "obj5"
+		obj5.Area(); // Calling Area Method
+		obj5.Display();// Calling Display Method
+		
+		//Performing Operations on "obj6"
+		obj6.Display();// Calling Display Method
+		
+		
+		
+	}//exiting void main ()
+	
+
+}//exiting class Constructor
